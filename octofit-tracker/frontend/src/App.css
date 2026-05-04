@@ -1,0 +1,105 @@
+:root {
+  --surface: #f4f1ea;
+  --ink: #17322a;
+  --accent: #e77817;
+  --accent-dark: #c95c00;
+  --card: #fffcf6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 15%, #fff6df 0, #f4f1ea 50%, #ebe6da 100%);
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #dbcdb8;
+  background: rgba(255, 252, 246, 0.9);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+}
+
+.nav-brand {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.top-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.top-nav a:hover {
+  color: var(--accent-dark);
+}
+
+.home-page {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.hero-card {
+  width: min(680px, 95vw);
+  text-align: center;
+  border: 1px solid #e3d8c6;
+  border-radius: 18px;
+  padding: 2rem 1.25rem;
+  background: var(--card);
+  box-shadow: 0 18px 40px rgba(23, 50, 42, 0.12);
+}
+
+.hero-card h1 {
+  margin: 0.8rem 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+}
+
+.hero-image {
+  width: 90px;
+  height: auto;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.api-status {
+  margin-top: 1rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .top-nav nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
